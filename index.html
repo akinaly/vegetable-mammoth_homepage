@@ -50,31 +50,74 @@
 
 						<!-- Panel -->
 							<section class="panel color1">
-								<div class="intro joined">
-									<h2 class="major" style="color:#df1111;">公式キャラクター</h2>
-									<p>キャラクターをクリックして話しかけてみよう！</p>
-								</div>
-								<div class="inner" style="text-align:center;">
-									<!-- 吹き出し -->
-								<div id="mammoth-message"
-								style="background:white; color:#333; padding:15px;
-								border-radius:15px; margin-bottom:20px;
-								max-width:350px; font-weight:bold;">
-								やあ！ぼくはベジタブルマンモスの公式キャラクターだゾウ！
-							</div>
-							<!-- キャラクター -->
-							 <button id="mammoth-button"
-							 type="button"
-							 style="border:none; background:transparent; cursor:pointer;">
-							 <img src="images/character.jpg"
-							 alt="ベジタブルマンモス公式キャラクター"
-							 style="max-width:100%; max-height:300px;">
-							</button>
-							<p style="margin-top:10px;">
-								<small>キャラクターをクリックしてね！</small>
-							</p>
-						</div>
-					</section>
+    <div class="intro joined">
+        <h2 class="major" style="color:#df1111;">
+            公式キャラクター
+        </h2>
+        <p>キャラクターをクリックして話しかけてみよう！</p>
+    </div>
+
+    <div class="inner" style="
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:15px;
+        padding:20px;
+    ">
+
+        <!-- 吹き出し -->
+        <div id="mammoth-message" style="
+            background:white;
+            color:#333;
+            padding:18px 25px;
+            border-radius:20px;
+            text-align:center;
+            width:100%;
+            max-width:420px;
+            font-weight:bold;
+            box-sizing:border-box;
+        ">
+            ベジタブルマンモスへようこそ！
+        </div>
+
+        <!-- キャラクター -->
+        <button id="mammoth-button"
+                type="button"
+                style="
+                    appearance:none;
+                    -webkit-appearance:none;
+                    border:0 !important;
+                    outline:none !important;
+                    box-shadow:none !important;
+                    background:transparent !important;
+                    padding:0 !important;
+                    margin:0;
+                    width:auto;
+                    cursor:pointer;
+                ">
+            <img src="images/character.jpg"
+                 alt="ベジタブルマンモス公式キャラクター"
+                 style="
+                    display:block;
+                    width:100%;
+                    max-width:380px;
+                    max-height:380px;
+                    object-fit:contain;
+                 ">
+        </button>
+
+        <!-- 操作案内 -->
+        <p style="
+            text-align:center;
+            margin:0;
+            font-weight:bold;
+        ">
+            ↑ キャラクターをクリックしてね！
+        </p>
+
+    </div>
+</section>
 
 						<!-- Panel (Spotlight) -->
 							<section class="panel spotlight large left">
