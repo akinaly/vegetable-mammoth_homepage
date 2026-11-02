@@ -51,13 +51,30 @@
 						<!-- Panel -->
 							<section class="panel color1">
 								<div class="intro joined">
-									<h2 class="major"style="color:#df1111;">公式キャラクター</h2>
-									<p>-</p>
+									<h2 class="major" style="color:#df1111;">公式キャラクター</h2>
+									<p>キャラクターをクリックして話しかけてみよう！</p>
 								</div>
-								<div class="inner">
-								    <img src="images/character.jpg" alt="公式キャラクター" style="max-width:100%;">
-								</div>
-							</section>
+								<div class="inner" style="text-align:center;">
+									<!-- 吹き出し -->
+								<div id="mammoth-message"
+								style="background:white; color:#333; padding:15px;
+								border-radius:15px; margin-bottom:20px;
+								max-width:350px; font-weight:bold;">
+								やあ！ぼくはベジタブルマンモスの公式キャラクターだゾウ！
+							</div>
+							<!-- キャラクター -->
+							 <button id="mammoth-button"
+							 type="button"
+							 style="border:none; background:transparent; cursor:pointer;">
+							 <img src="images/character.jpg"
+							 alt="ベジタブルマンモス公式キャラクター"
+							 style="max-width:100%; max-height:300px;">
+							</button>
+							<p style="margin-top:10px;">
+								<small>キャラクターをクリックしてね！</small>
+							</p>
+						</div>
+					</section>
 
 						<!-- Panel (Spotlight) -->
 							<section class="panel spotlight large left">
@@ -107,6 +124,36 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/main.js"></script>
+<script>
+    const mammothMessages = [
+        "やあ！今日も元気に活動しているゾウ！",
+        "今日もトマトをいただきマンモス",
+        "僕のことは食べないでくれよ！",
+        "文化祭のピザはもう食べたかな？",
+        "新しい仲間をいつでも募集中だゾウ！",
+        "ベジタブルマンモスへようこそ！",
+        "みんなで野菜を育てるのは楽しいゾウ！",
+        "信州大学の畑で待っているゾウ！"
+    ];
 
+    const button = document.getElementById("mammoth-button");
+    const message = document.getElementById("mammoth-message");
+
+    let previousIndex = -1;
+
+    button.addEventListener("click", function() {
+        let randomIndex;
+
+        do {
+            randomIndex = Math.floor(
+                Math.random() * mammothMessages.length
+            );
+        } while (randomIndex === previousIndex);
+
+        previousIndex = randomIndex;
+
+        message.textContent = mammothMessages[randomIndex];
+    });
+</script>
 	</body>
 </html>
